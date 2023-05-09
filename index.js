@@ -1,17 +1,22 @@
-const barraBusquedaElement = document.getElementById("busqueda-header");
-const menuMobileHeader = document.getElementById("menu-header-mobile");
-const botonToggleMenuHeader = document.getElementById("toggle-menu-header");
+const botonBuscar = document.getElementById("toggle-buscar-mobile");
+const botonToggleMenuHeader = document.getElementById("toggle-menu-mobile");
+const busquedaHeader = document.getElementById("busqueda-header");
+const cerrarBusquedaHeader = document.querySelector("#busqueda-header button");
+const menuHeaderMobile = document.getElementById("menu-header-mobile");
 
 
-document.getElementById("cerrar-busqueda").addEventListener("click",toggleBarraBusqueda)
-document.getElementById("toggle-buscar-mobile").addEventListener("click",toggleBarraBusqueda)
-botonToggleMenuHeader.addEventListener("click",toggleMenuMobile)
+botonBuscar.addEventListener("click",toggleBuscar);
+cerrarBusquedaHeader.addEventListener("click",toggleBuscar);
 
-function toggleBarraBusqueda(){
-  barraBusquedaElement.classList.toggle("escondido");
+botonToggleMenuHeader.addEventListener("click", ()=>{
+  menuHeaderMobile.classList.toggle("escondido");
+  botonToggleMenuHeader.src = menuHeaderMobile.classList === "escondido" ?
+    "./img/menu-hamburguesa.svg" :
+    "./img/x.svg";
+})
+
+
+function toggleBuscar(){
+  busquedaHeader.classList.toggle("escondido");
 }
 
-function toggleMenuMobile(){
-  menuMobileHeader.classList.toggle("escondido");
-  botonToggleMenuHeader.src = menuMobileHeader.classList === "escondido" ? "./img/menu-hamburgesa.svg" : "algo"; 
-}
