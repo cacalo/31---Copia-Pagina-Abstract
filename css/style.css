@@ -1,0 +1,325 @@
+:root{
+  --color-acento: #dadbf1;
+  --color-acento-fuerte: #4C5FD5;
+  --color-texto: black;
+  --color-texto-alt: white;
+  --color-fondo: white;
+  --color-fondo-alt: black;
+}
+
+@font-face {
+  font-family: GT America Standard;
+  src: url("./../fonts/GT-America-Standard-Regular-Trial.otf");
+}
+
+body{
+  font-family: 'GT America Standard', sans-serif;
+}
+
+.contenedor-chico{
+  width: 80%;
+  max-width: 1800px;
+  margin: auto;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+h1{
+  font-size: 80px;
+  margin-bottom: 26px;
+}
+
+h2, h3{
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h4{
+  font-weight: 600;
+}
+
+p, h2, h3{
+  margin-bottom: 16px;
+}
+
+.escondido{
+  display: none!important;
+}
+
+.desktop{}
+
+.mobile{
+  display: none;
+}
+
+/* Header */
+header{
+  background-color: var(--color-fondo-alt);
+  color: var(--color-texto-alt);
+  font-size: 24px;
+}
+
+header img{
+  height: 30px;
+  margin-right: -80px;
+}
+
+header>div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+header>div>div{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+header>div>div>a:first-of-type{
+  display: inline-flex;
+  align-items: center;
+}
+
+header>div>div:last-of-type a{
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+#request{
+  border: 1px solid var(--color-texto-alt);
+}
+
+#sign-in{
+  background-color: var(--color-acento-fuerte);
+  border: 1px solid var(--color-acento-fuerte);
+}
+
+#header-derecha-mobile{
+  display: none;
+}
+
+#busqueda-header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 31px;
+  background-color: var(--color-fondo);
+  padding: 20px 50px;
+}
+
+#busqueda-header input, #busqueda-header form{
+  width: 100%;
+}
+
+#busqueda-header input{
+  height: 30px;
+  padding: 10px;
+  padding-right: 0;
+  font-size: 20px;
+}
+
+#busqueda-header button{
+  margin: 0 20px;
+  background-color: unset;
+  border: unset;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+#menu-header-mobile{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+#menu-header-mobile a{
+  text-align: center;
+  width: 50%;
+  height: 50px;
+  line-height: 50px;
+}
+
+#menu-header-mobile a:last-child{
+  border-top: 1px solid var(--color-texto-alt);
+}
+
+header .mobile button{
+  background-color: unset;
+  border: unset;
+}
+
+header .mobile button img{
+  width: 20px;
+}
+
+/* Sección búsqueda */
+#seccion-busqueda{
+  background-color: var(--color-acento);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 115px;
+}
+
+#barra-busqueda{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 1px solid var(--color-texto);
+  border-radius: 3px;
+  box-shadow: 0 9px 14px 0 rgba(0, 0, 0, 0.1);
+  max-width: 720px;
+  margin: 0 10px;
+}
+
+#barra-busqueda input{
+  border:unset;
+  padding: 16px;
+  width: 100%;
+}
+
+input[type=text]:focus{
+  outline:unset;
+}
+
+#barra-busqueda img{
+  height: 24px;
+  margin-right: 12px;
+}
+
+/* Sección Tarjetas */
+#seccion-tarjetas{
+  padding: 8rem 0;
+}
+
+#seccion-tarjetas>div{
+  background-color: var(--color-acento);
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--color-fondo);
+  gap: 20px;
+}
+
+.tarjeta{
+  display: flex;
+  width: 45%;
+  margin-bottom: 3rem;
+  flex-grow: 1;
+}
+
+.tarjeta p{
+  font-size: 24px;
+}
+
+.tarjeta>img{
+  max-height: 80px;
+  margin-right: 25px;
+}
+
+.tarjeta>div{
+}
+
+.tarjeta a{
+  color: var(--color-acento-fuerte);
+}
+
+.tarjeta a::after{
+  content: "→";
+  color: var(--color-acento-fuerte);
+}
+
+
+/* Footer */
+footer{
+  background-color: var(--color-fondo-alt);
+  color: var(--color-texto-alt);
+  padding-bottom: 60px;
+}
+
+footer .contenedor-chico, footer ul{
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 200px;
+}
+
+footer .contenedor-chico{
+  justify-content: space-between;
+}
+
+footer>.contenedor-chico>ul>li{
+  margin: 20px;
+}
+
+#marca{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+
+footer ul ul {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+footer ul ul li a{
+  /* color: red!important; */
+}
+
+footer a, header a{
+  color: var(--color-texto-alt);
+}
+
+footer img{
+  width: 140px;
+  margin-bottom: 1rem;
+}
+
+#help{
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--color-acento-fuerte);
+  border: unset;
+  border-radius: 50px;
+  padding: 13px 20px;
+  color: var(--color-texto-alt);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px){
+  .desktop{
+    display: none;
+  }
+  .mobile{
+    display: block;
+  }
+}
+
+
+@media (max-width: 768px){
+  .tarjeta {
+      width: 100%;
+  }
+  .contenedor-chico{
+    width: 100%;
+  }
+}
